@@ -27,25 +27,6 @@ namespace AspNetCoreMicro
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-
-            string ip = Configuration["EndPoint:Address"];
-            int port = int.Parse(Configuration["EndPoint:Port"]);
-            var client = new ConsulClient(ConfigurationOverview);
-            var result = client.Agent.ServiceRegister(new AgentServiceRegistration()
-            {
-                ID="AspNetCoreMicro"+Guid.NewGuid(),//服务编号，不能重复。用Guid最简单
-                Name="AspNetCoreMicro",//服务的名字
-                Address=ip,//我的IP地址(可以被其他应用访问的接口，本地测试可以用127.0.0.1，实际机房中一定要写自己的内网IP地址)
-                Port=port,
-                Check=new AgentServiceCheck()
-                {
-                    DeregisterCriticalServiceAfter = TimeSpan.FromSeconds(5),//服务停止多久后反注册
-                    Interval=TimeSpan.FromSeconds(10),//健康检查时间间隔，或者称为心跳间隔
-                    HTTP = $"http://{ip}:{port}/api/health",//健康检查地址
-                    Timeout = TimeSpan.FromSeconds(5)
-                }
-                //应用停止的时候反注册
-            });
         }
 
         private void ConfigurationOverview(ConsulClientConfiguration obj)
@@ -67,8 +48,34 @@ namespace AspNetCoreMicro
                 app.UseHsts();
             }
 
+            string ip = Configuration["EndPoint:Address"];
+            int port = int.Parse(Configuration["EndPoint:Port"]);
+            //向Consul注册服务
+            var client = new ConsulClient(ConfigurationOverview);
+
+            var result = client.Agent.ServiceRegister(new AgentServiceRegistration()
+            {
+                ID = "AspNetCoreMicro" + Guid.NewGuid(),//服务编号，不能重复。用Guid最简单
+                Name = "AspNetCoreMicro",//服务的名字
+                Address = ip,//我的IP地址(可以被其他应用访问的接口，本地测试可以用127.0.0.1，实际机房中一定要写自己的内网IP地址)
+                Port = port,
+                Check = new AgentServiceCheck()
+                {
+                    DeregisterCriticalServiceAfter = TimeSpan.FromSeconds(5),//服务停止多久后反注册
+                    Interval = TimeSpan.FromSeconds(10),//健康检查时间间隔，或者称为心跳间隔
+                    HTTP = $"http://{ip}:{port}/api/health",//健康检查地址
+                    Timeout = TimeSpan.FromSeconds(5)
+                }
+                //应用停止的时候反注册
+            });
+            //client.Agent.ServiceDeregister();//asp.net core应用停止。applicationliftserver...
+
+            //TODO:应用停止后反注册
+
+
             app.UseHttpsRedirection();
             app.UseMvc();
+           
         }
     }
 }

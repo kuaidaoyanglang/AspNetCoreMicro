@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreMicro", "AspNetCoreMicro\AspNetCoreMicro.csproj", "{BB742A58-84BA-4B9E-8E12-B08FB5C43C24}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryConsul1", "QueryConsul1\QueryConsul1.csproj", "{09980569-C090-4B19-A5CB-13A5D9BFDF4A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{BB742A58-84BA-4B9E-8E12-B08FB5C43C24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB742A58-84BA-4B9E-8E12-B08FB5C43C24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB742A58-84BA-4B9E-8E12-B08FB5C43C24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09980569-C090-4B19-A5CB-13A5D9BFDF4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09980569-C090-4B19-A5CB-13A5D9BFDF4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09980569-C090-4B19-A5CB-13A5D9BFDF4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09980569-C090-4B19-A5CB-13A5D9BFDF4A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
