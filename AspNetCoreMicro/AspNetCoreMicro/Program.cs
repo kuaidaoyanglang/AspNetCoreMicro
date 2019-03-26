@@ -17,21 +17,25 @@ namespace AspNetCoreMicro
             CreateWebHostBuilder(args).Build().Run();
         }
 
-        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>();
+        //public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        //    WebHost.CreateDefaultBuilder(args)
+        //        .UseStartup<Startup>();
 
-
-        //public static IWebHostBuilder CreateWebHostBuilder(string[] args)
-        //{
-        //    var config=new ConfigurationBuilder()
-        //        .AddCommandLine(args).Build();
-        //    string ip = config["ip"];
-        //    string port = config["port"];
-        //    return WebHost.CreateDefaultBuilder(args)
-        //        .UseStartup<Startup>()
-        //        .UseUrls($"http://{ip}:{port}");
-        //}
+        public static int _port = 0;
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args)
+        {
+            var config = new ConfigurationBuilder()
+                .AddCommandLine(args).Build();
+            string ip = config["ip"];
+            _port = Convert.ToInt32(config["port"]);
+            if (_port == 0)
+            {
+                _port = Tools.GetRandAvailablePort();
+            }
+            return WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>()
+                .UseUrls($"http://{ip}:{_port}");
+        }
 
     }
 }

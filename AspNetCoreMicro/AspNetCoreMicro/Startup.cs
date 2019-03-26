@@ -48,8 +48,8 @@ namespace AspNetCoreMicro
                 app.UseHsts();
             }
 
-            string ip = Configuration["EndPoint:Address"];
-            int port = int.Parse(Configuration["EndPoint:Port"]);
+            string ip = Configuration["ip"];
+            int port = Program._port;
             //向Consul注册服务
             var client = new ConsulClient(ConfigurationOverview);
 
