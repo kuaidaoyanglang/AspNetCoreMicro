@@ -12,6 +12,8 @@ namespace AspectCoreConsoleApp
             {
                 Person person = proxyGenerator.CreateClassProxy<Person>();
                 person.Say("davy yang");
+                Console.WriteLine(person.GetType());
+                Console.WriteLine(person.GetType().BaseType);
             }
             Console.WriteLine("Hello World!");
         }
