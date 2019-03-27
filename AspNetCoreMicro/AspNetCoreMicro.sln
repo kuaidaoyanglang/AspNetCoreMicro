@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestTools", "RestTools\Rest
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyTestConsoleApp", "PollyTestConsoleApp\PollyTestConsoleApp.csproj", "{C85EF3A0-161B-4EFD-BC70-67F3AD37A832}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspectCoreConsoleApp", "AspectCoreConsoleApp\AspectCoreConsoleApp.csproj", "{DAAD7648-5658-4188-A551-4EEBA3484931}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C85EF3A0-161B-4EFD-BC70-67F3AD37A832}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C85EF3A0-161B-4EFD-BC70-67F3AD37A832}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C85EF3A0-161B-4EFD-BC70-67F3AD37A832}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAAD7648-5658-4188-A551-4EEBA3484931}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAAD7648-5658-4188-A551-4EEBA3484931}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAAD7648-5658-4188-A551-4EEBA3484931}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAAD7648-5658-4188-A551-4EEBA3484931}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
