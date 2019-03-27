@@ -4,17 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace OcelotWebApplication.Controllers
+namespace EmailWebApplication.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class EmailController : ControllerBase
     {
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1", "value2" };
+            Console.WriteLine("发送邮件");
+            return new string[] { "value1", "value2",$"我是{nameof(EmailController)}我发送了邮件" };
         }
 
         // GET api/values/5

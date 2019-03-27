@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace OcelotWebApplication
+namespace EmailWebApplication
 {
     public class Program
     {
@@ -19,12 +19,7 @@ namespace OcelotWebApplication
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-                .UseUrls("http://127.0.0.1:5555")
-                .ConfigureAppConfiguration((hostingContext, builder) =>
-                {
-
-                    builder.AddJsonFile("configuration.json", false, true); //将configuration.json配置文件夹到IConfigurationBuilder中
-                })
+                .UseUrls("http://127.0.0.1:1845")
                 .UseStartup<Startup>();
     }
 }

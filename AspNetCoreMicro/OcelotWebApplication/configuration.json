@@ -1,0 +1,30 @@
+{ 
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/{url}", 
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "127.0.0.1",
+          "Port": 1845
+        }
+      ],
+      "UpstreamPathTemplate": "/api/Msg/{url}",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+
+    {
+      "DownstreamPathTemplate": "/api/{url}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "127.0.0.1",
+          "Port": 8889
+        }
+      ],
+      "UpstreamPathTemplate": "/Product/{url}",
+      "UpstreamHttpMethod": [ "Get" ]
+    }
+
+  ]
+}
