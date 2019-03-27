@@ -11,6 +11,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using Consul;
+using Ocelot.Provider.Consul;
 
 namespace OcelotWebApplication
 {
@@ -27,7 +29,8 @@ namespace OcelotWebApplication
         public void ConfigureServices(IServiceCollection services)
         {
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            services.AddOcelot(Configuration);
+            services.AddOcelot(Configuration).AddConsul();
+            //services.addcon
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

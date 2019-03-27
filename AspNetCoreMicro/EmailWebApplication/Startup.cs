@@ -40,7 +40,7 @@ namespace EmailWebApplication
 
             string ip = "127.0.0.1";
             int port = 1845;
-            //向Consul注册服务
+            //向Consul注册服务 
             var client = new ConsulClient(ConfigurationOverview);
 
             var result = client.Agent.ServiceRegister(new AgentServiceRegistration()

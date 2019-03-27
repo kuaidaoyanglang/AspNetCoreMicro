@@ -1,30 +1,30 @@
-{ 
+{
   "ReRoutes": [
     {
-      "DownstreamPathTemplate": "/api/{url}", 
+      "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "127.0.0.1",
-          "Port": 1845
-        }
-      ],
-      "UpstreamPathTemplate": "/api/Msg/{url}",
+      "ServiceName": "EmailWebApplication",
+      "LoadBalancer": "LeastConnection",
+      "UseServiceDiscovery": true,
+      "UpstreamPathTemplate": "/Msg/{url}",
       "UpstreamHttpMethod": [ "Get" ]
     },
 
     {
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
-      "DownstreamHostAndPorts": [
-        {
-          "Host": "127.0.0.1",
-          "Port": 8889
-        }
-      ],
+      "ServiceName": "SMSWebApplication",
+      "LoadBalancer": "LeastConnection",
+      "UseServiceDiscovery": true,
       "UpstreamPathTemplate": "/Product/{url}",
       "UpstreamHttpMethod": [ "Get" ]
     }
 
-  ]
+  ],
+  "GlobalConfiguration": {
+    "ServiceDiscoveryProvider": {
+      "Host": "127.0.0.1",
+      "Port": 8500 
+    } 
+  }
 }
