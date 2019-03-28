@@ -41,7 +41,17 @@ namespace OcelotWebApplication
                 app.UseDeveloperExceptionPage();
             }
 
-            app.UseOcelot().Wait();
+            var configuration = new OcelotPipelineConfiguration()
+            {
+                PreErrorResponderMiddleware = async (ctx, next) =>
+                {
+                    string token = ctx.HttpContext.Request.Headers["token"].FirstOrDefault();
+                    ctx.HttpContext.Request.Headers.Add("xxtoken", token?.ToUpper() ?? "What fuck are you doing?");
+                    await next.Invoke();
+                }
+            };
+
+            app.UseOcelot(configuration).Wait();
             //app.UseMvc();
         }
     }

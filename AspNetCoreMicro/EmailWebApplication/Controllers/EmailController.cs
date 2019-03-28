@@ -15,7 +15,8 @@ namespace EmailWebApplication.Controllers
         public ActionResult<IEnumerable<string>> Get()
         {
             Console.WriteLine("发送邮件");
-            return new string[] { "value1", "value2",$"我是{nameof(EmailController)}我发送了邮件" };
+
+            return new string[] { "value1", "value2", $"我是{nameof(EmailController)}我发送了邮件", Request.Headers["xxtoken"] };
         }
 
         // GET api/values/5
