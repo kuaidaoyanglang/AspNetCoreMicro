@@ -23,6 +23,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSWebApplication", "SMSWeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailWebApplication", "EmailWebApplication\EmailWebApplication.csproj", "{4F8E799F-A32A-417F-80CD-1DB839CBA310}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtTestWebApplication", "JwtTestWebApplication\JwtTestWebApplication.csproj", "{311FFDBD-AF5A-4A30-AABA-9304F4F3C5CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenServerWebApplication", "TokenServerWebApplication\TokenServerWebApplication.csproj", "{3CF5EA04-36C1-4883-871D-C312144711C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,14 @@ Global
 		{4F8E799F-A32A-417F-80CD-1DB839CBA310}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F8E799F-A32A-417F-80CD-1DB839CBA310}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F8E799F-A32A-417F-80CD-1DB839CBA310}.Release|Any CPU.Build.0 = Release|Any CPU
+		{311FFDBD-AF5A-4A30-AABA-9304F4F3C5CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{311FFDBD-AF5A-4A30-AABA-9304F4F3C5CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{311FFDBD-AF5A-4A30-AABA-9304F4F3C5CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{311FFDBD-AF5A-4A30-AABA-9304F4F3C5CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CF5EA04-36C1-4883-871D-C312144711C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF5EA04-36C1-4883-871D-C312144711C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF5EA04-36C1-4883-871D-C312144711C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF5EA04-36C1-4883-871D-C312144711C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
