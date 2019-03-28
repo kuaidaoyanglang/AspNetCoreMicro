@@ -51,7 +51,7 @@ namespace OcelotWebApplication
             {
                 PreErrorResponderMiddleware = async (ctx, next) =>
                 {
-                    if (!ctx.HttpContext.Request.Path.Value.ToUpper().StartsWith("/Auth".ToUpper()))
+                    if (!ctx.HttpContext.Request.Path.Value.ToUpper().StartsWith("/Token/Auth".ToUpper()))
                     {
                         string token = ctx.HttpContext.Request.Headers["token"].FirstOrDefault();
                         ctx.HttpContext.Request.Headers.Add("xxtoken", token?.ToUpper() ?? "What fuck are you doing?");
@@ -80,6 +80,15 @@ namespace OcelotWebApplication
 
                             string userName = payload.UserName;
                             ctx.HttpContext.Request.Headers.Add("X-UserName", userName);
+                        }
+                        catch (FormatException)
+                        {
+                            ctx.HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                            using (StreamWriter writer = new StreamWriter(ctx.HttpContext.Response.Body))
+                            {
+                                writer.Write("Token format invalid");
+                            }
+                            return;
                         }
                         catch (TokenExpiredException)
                         {
