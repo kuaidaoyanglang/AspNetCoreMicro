@@ -40,9 +40,9 @@ namespace IdentityServerWebApplication
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseMvc();
+            app.UseMvc();
             app.UseIdentityServer();
-            /*
+
             string ip = "127.0.0.1";
             int port = 9888;
             //向Consul注册服务 
@@ -62,7 +62,7 @@ namespace IdentityServerWebApplication
                     Timeout = TimeSpan.FromSeconds(5)
                 }
                 //应用停止的时候反注册
-            });*/
+            });
 
         }
 
