@@ -3,29 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreMicro", "AspNetCoreMicro\AspNetCoreMicro.csproj", "{BB742A58-84BA-4B9E-8E12-B08FB5C43C24}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreMicro", "AspNetCoreMicro\AspNetCoreMicro.csproj", "{BB742A58-84BA-4B9E-8E12-B08FB5C43C24}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueryConsul1", "QueryConsul1\QueryConsul1.csproj", "{09980569-C090-4B19-A5CB-13A5D9BFDF4A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueryConsul1", "QueryConsul1\QueryConsul1.csproj", "{09980569-C090-4B19-A5CB-13A5D9BFDF4A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestTools", "RestTools\RestTools.csproj", "{88B183B5-DFB8-4204-9424-EFA120E2D1E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RestTools", "RestTools\RestTools.csproj", "{88B183B5-DFB8-4204-9424-EFA120E2D1E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyTestConsoleApp", "PollyTestConsoleApp\PollyTestConsoleApp.csproj", "{C85EF3A0-161B-4EFD-BC70-67F3AD37A832}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PollyTestConsoleApp", "PollyTestConsoleApp\PollyTestConsoleApp.csproj", "{C85EF3A0-161B-4EFD-BC70-67F3AD37A832}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspectCoreConsoleApp", "AspectCoreConsoleApp\AspectCoreConsoleApp.csproj", "{DAAD7648-5658-4188-A551-4EEBA3484931}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspectCoreConsoleApp", "AspectCoreConsoleApp\AspectCoreConsoleApp.csproj", "{DAAD7648-5658-4188-A551-4EEBA3484931}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HystrixTestConsoleApp", "HystrixTestConsoleApp\HystrixTestConsoleApp.csproj", "{0B49B18B-D234-4473-A7EB-EC544885562E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HystrixTestConsoleApp", "HystrixTestConsoleApp\HystrixTestConsoleApp.csproj", "{0B49B18B-D234-4473-A7EB-EC544885562E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCoreHystrix", "AspNetCoreHystrix\AspNetCoreHystrix.csproj", "{ED26B4B5-CFE7-41F6-B197-102362BD6312}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreHystrix", "AspNetCoreHystrix\AspNetCoreHystrix.csproj", "{ED26B4B5-CFE7-41F6-B197-102362BD6312}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotWebApplication", "OcelotWebApplication\OcelotWebApplication.csproj", "{FC5F2127-4EEC-4A9E-9B66-358ABE808085}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotWebApplication", "OcelotWebApplication\OcelotWebApplication.csproj", "{FC5F2127-4EEC-4A9E-9B66-358ABE808085}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SMSWebApplication", "SMSWebApplication\SMSWebApplication.csproj", "{C6487594-A17E-4E70-9F4C-20F3BBED5886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SMSWebApplication", "SMSWebApplication\SMSWebApplication.csproj", "{C6487594-A17E-4E70-9F4C-20F3BBED5886}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailWebApplication", "EmailWebApplication\EmailWebApplication.csproj", "{4F8E799F-A32A-417F-80CD-1DB839CBA310}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailWebApplication", "EmailWebApplication\EmailWebApplication.csproj", "{4F8E799F-A32A-417F-80CD-1DB839CBA310}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JwtTestWebApplication", "JwtTestWebApplication\JwtTestWebApplication.csproj", "{311FFDBD-AF5A-4A30-AABA-9304F4F3C5CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JwtTestWebApplication", "JwtTestWebApplication\JwtTestWebApplication.csproj", "{311FFDBD-AF5A-4A30-AABA-9304F4F3C5CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokenServerWebApplication", "TokenServerWebApplication\TokenServerWebApplication.csproj", "{3CF5EA04-36C1-4883-871D-C312144711C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TokenServerWebApplication", "TokenServerWebApplication\TokenServerWebApplication.csproj", "{3CF5EA04-36C1-4883-871D-C312144711C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServerWebApplication", "IdentityServerWebApplication\IdentityServerWebApplication.csproj", "{6C01786D-D980-4829-B311-5BA495805702}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{3CF5EA04-36C1-4883-871D-C312144711C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CF5EA04-36C1-4883-871D-C312144711C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CF5EA04-36C1-4883-871D-C312144711C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C01786D-D980-4829-B311-5BA495805702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C01786D-D980-4829-B311-5BA495805702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C01786D-D980-4829-B311-5BA495805702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C01786D-D980-4829-B311-5BA495805702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

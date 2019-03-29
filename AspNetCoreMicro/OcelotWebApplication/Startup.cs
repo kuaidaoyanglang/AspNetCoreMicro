@@ -14,6 +14,7 @@ using Microsoft.Extensions.Options;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Consul;
+using IdentityServer4.AccessTokenValidation;
 using JWT;
 using Ocelot.Provider.Consul;
 using JWT.Algorithms;
@@ -34,6 +35,18 @@ namespace OcelotWebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication()
+                //对配置文件中使用了ChatKey配置了AuthenticationProviderKey=ChatKey
+                //的路由规则使用如下的验证方式
+                .AddIdentityServerAuthentication("ChatKey", option =>
+                {
+                    //IdentityService认证服务器地址
+                    option.Authority = "http://127.0.0.1:9888";
+                    option.ApiName = "chatapi";//要连接的应用名称
+                    option.RequireHttpsMetadata = false;
+                    option.SupportedTokens = SupportedTokens.Both;
+                    option.ApiSecret = "123321";//密钥
+                });
             //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddOcelot(Configuration).AddConsul();
             //services.addcon
