@@ -38,11 +38,27 @@ namespace OcelotWebApplication
             services.AddAuthentication()
                 //对配置文件中使用了ChatKey配置了AuthenticationProviderKey=ChatKey
                 //的路由规则使用如下的验证方式
-                .AddIdentityServerAuthentication("ChatKey", option =>
+                .AddIdentityServerAuthentication("EmailWebApplicationKey", option =>
                 {
                     //IdentityService认证服务器地址
                     option.Authority = "http://127.0.0.1:9888";
-                    option.ApiName = "chatapi";//要连接的应用名称
+                    option.ApiName = "EmailWebApplication";//要连接的应用名称
+                    option.RequireHttpsMetadata = false;
+                    option.SupportedTokens = SupportedTokens.Both;
+                    option.ApiSecret = "123321";//密钥
+                }).AddIdentityServerAuthentication("SMSWebApplicationKey", option =>
+                {
+                    //IdentityService认证服务器地址
+                    option.Authority = "http://127.0.0.1:9888";
+                    option.ApiName = "SMSWebApplication";//要连接的应用名称
+                    option.RequireHttpsMetadata = false;
+                    option.SupportedTokens = SupportedTokens.Both;
+                    option.ApiSecret = "123321";//密钥
+                }).AddIdentityServerAuthentication("TokenServerWebApplicationKey", option =>
+                {
+                    //IdentityService认证服务器地址
+                    option.Authority = "http://127.0.0.1:9888";
+                    option.ApiName = "TokenServerWebApplication";//要连接的应用名称
                     option.RequireHttpsMetadata = false;
                     option.SupportedTokens = SupportedTokens.Both;
                     option.ApiSecret = "123321";//密钥
@@ -59,7 +75,7 @@ namespace OcelotWebApplication
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            /*
             var configuration = new OcelotPipelineConfiguration()
             {
                 PreErrorResponderMiddleware = async (ctx, next) =>
@@ -128,7 +144,8 @@ namespace OcelotWebApplication
                 }
             };
 
-            app.UseOcelot(configuration).Wait();
+            //app.UseOcelot(configuration).Wait();*/
+            app.UseOcelot().Wait();
             //app.UseMvc();
         }
     }
