@@ -20,7 +20,7 @@
         "AllowedScopes": []
       }
     },
-
+    /*
     {
       "DownstreamPathTemplate": "/connect/{url}",
       "DownstreamScheme": "http",
@@ -35,12 +35,12 @@
         "Period": "30s", //统计时间段：1s,1m,1h,1d
         "PeriodTimespan": 10, //一旦碰到一次“超限”，多少秒后重新计数请求
         "Limit": 100000 //指定时间段内最多请求次数
-      } /*,
+      },
       "AuthenticationOptions": {
         "AuthenticationProviderKey": "EmailWebApplicationKey",
         "AllowedScopes": []
-      }*/
-    },
+      }
+    },*/
 
     {
       "DownstreamPathTemplate": "/api/{url}",
